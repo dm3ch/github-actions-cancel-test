@@ -1,0 +1,14 @@
+name: CI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Go 1.16
+        uses: actions/setup-go@v1
+      - run: go build ./signal.go
+      - run: signal
