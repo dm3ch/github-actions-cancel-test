@@ -12,3 +12,4 @@ jobs:
         uses: actions/setup-go@v1
       - run: go build ./signal.go
       - run: ls -la
+      - run: ./signal
